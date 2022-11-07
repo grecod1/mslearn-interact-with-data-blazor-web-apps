@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "mslearn-interact-with-data-blazor-web-apps",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
