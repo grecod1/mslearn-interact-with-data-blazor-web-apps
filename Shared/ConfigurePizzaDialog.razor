@@ -45,4 +45,13 @@
             }
         }
     }
+
+    protected override void OnInitialized()
+    {
+        if (Pizza.Special.Name == "Margherita Family Size")
+        {
+            Pizza.DefaultSize = 24;
+            Pizza.Size = 24;
+        }
+    }
 }
