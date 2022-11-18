@@ -3,7 +3,11 @@
     <ul class="nav nav-pills flex-column">
         @foreach (TabPage tabPage in Items)
         {
-          <li class="nav-item pb-1"><a class="nav-link @GetActiveTab(tabPage)" @onclick=@(() => ActivateItem(tabPage) )>@tabPage.Title</a></li>
+          <li class="nav-item pb-1">
+            <a class="nav-link @GetActiveTab(tabPage)" @onclick=@(() => ActivateItem(tabPage) )>
+                @tabPage.Title
+            </a>
+            </li>
         }
     </ul>
 

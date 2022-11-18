@@ -36,9 +36,10 @@ public class OrdersController : Controller
     [HttpGet]
     public async Task<ActionResult<List<OrderWithStatus>>> GetOrders()
     {
-        var orders = await _db.Orders
+        var orders = await _db.Orders        
  	    .Include(o => o.Pizzas).ThenInclude(p => p.Special)
- 	    .Include(o => o.Pizzas).ThenInclude(p => p.Toppings).ThenInclude(t => t.Topping)
+ 	    .Include(o => o.Pizzas).ThenInclude(p => p.Toppings).ThenInclude(t => t.Topping)        
+
  	    .OrderByDescending(o => o.CreatedTime)
  	    .ToListAsync();
 
